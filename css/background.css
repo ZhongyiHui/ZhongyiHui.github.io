@@ -1,8 +1,0 @@
-#web_bg {
-  /* 背景图像的地址（url括号里）  */
-  background: url(https://wallroom.io/img/2560x1440/bg-426b328.jpg);
-  /* 背景图像不重复 */
-  background-repeat: no-repeat;
-  /* 背景图像大小 */
-  background-size: cover;
-}
