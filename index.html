@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Glory's Blog</title><meta name="description" content="也许会分享一些笔记和碎碎念。"><meta name="author" content="会钟意"><meta name="copyright" content="会钟意"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/atom.png"><link rel="canonical" href="http://zhongyihui.xyz/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Glory's Blog"><meta property="og:url" content="http://zhongyihui.xyz/"><meta property="og:site_name" content="Glory's Blog"><meta property="og:description" content="也许会分享一些笔记和碎碎念。"><meta property="og:image" content="http://zhongyihui.xyz/img/avatar.jpeg"><meta property="article:published_time" content="2020-11-06T06:03:54.453Z"><meta property="article:modified_time" content="2020-11-06T06:03:54.453Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.0.2',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-11-06 14:03:54'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.0.2"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 任意门</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/top_img/index.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Glory's Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 任意门</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Glory's Blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/ZhongyiHui" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:huizhy@mail2.sysu.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/27/probability/" title="概率“论”——论概率的本质">     <img class="post_bg" data-lazy-src="https://cdn.pixabay.com/photo/2016/02/22/08/22/money-1214945_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="概率“论”——论概率的本质"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/27/probability/" title="概率“论”——论概率的本质">概率“论”——论概率的本质</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-27T10:48:44.000Z" title="发表于 2020-08-27 18:48:44">2020-08-27</time></span></div><div class="content">现在只是草稿，大家先别看！！！！
+这篇文章我想讨论这样一个问题：概率的含义是什么？(interpretations of probability)
+我们说：“事件的概率为xx”，这个句子中的单词“概率”是什么意思？
+更准确的问题是：客观概率是什么意思？
+概率的定义应该满足这些条件：
+问题的必要性这个问题一定是有意义的，不是没有意义的瞎问。我们必须要对“概率”下一个定义，否则我们就不知道“事件的概率”到底在说什么。
+一些答案频率派设一个实验重复了$N$次，发生事件$A$的次数有$n$次。频率派认为事件的客观概率为$a$的定义是：$\lim_{N\rightarrow \infty} \frac{n}{N}=a$
+这种定义的缺陷很大：我们无法知道一件事的概率是多少。
+如果想知道概率，根据定义就必须知道频率，如果想知道频率就必须做实验，如果做实验就无法得到极限…
+其实概率和频率只有这两种关系：概率永远等于频率之比的极限。
+缩写小球一定会落在$A,B$中，且$A,B$完全相同。那么我们简称$A,B$发生的概率为$\frac{1}{2}$
+这样定义也有缺点：即使$A,B$不完全相同，也可能概率相 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/27/summary/" title="大一总结与大二计划">     <img class="post_bg" data-lazy-src="https://cdn.pixabay.com/photo/2019/05/11/02/33/cherry-blossom-4194997_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大一总结与大二计划"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/27/summary/" title="大一总结与大二计划">大一总结与大二计划</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-27T06:10:15.000Z" title="发表于 2020-08-27 14:10:15">2020-08-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%80%BB%E7%BB%93/">总结</a></span></div><div class="content">你知道吗？我们要开学了。这个长长的假期发生了许多事，在我坐上朝着机场方向前进的公交车时，我绝对想不到，迎接我们的将是什么。发生了许多事，但是它们都过去了，现在也不是回忆的时候。这个长长的假期也结束了，让我写篇文章来划分假期与学习吧。
+悟已往之不谏期望想来在我刚转专业成功之后，我写了许多乱七八糟的东西，多半是对未来的计划。但是总没有一个明确的计划。
+当时的期望大致有
+
+绩点4.5/5.0
+排名年级前三
+尽早学习四大力学以及其他课程
+尽早参与科研
+参与足够的竞赛，获得足够的奖项
+争取交流机会
+
+总结期望总是美好的，但是我们却总是无法达到期望。
+没达到期望的
+
+绩点4.36/5.0
+没有参与科研
+没有交流机会
+
+达到期望的
+
+年级排名第一
+四大力学至少简单看了一遍
+理论力学看了少半本朗道，还很不系统地看了其他材料
+电动力学看了个大概，基本知道框架了。目前在看朗道的场论
+量子力学刚开头，进展缓慢且困难
+统计力学开头不错，后面的基本不会
+
+
+接触了一点数学，现在在看微分几何
+参加了一个竞赛（虽然我很讨厌参加竞赛）
+
+没有计划的
+
+英语，没有好好计划也没有学
+LaTex, Mathematica, ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/20/exam-diary/" title="考试日记">     <img class="post_bg" data-lazy-src="https://cdn.pixabay.com/photo/2016/07/06/15/29/math-1500720_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="考试日记"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/20/exam-diary/" title="考试日记">考试日记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-20T12:56:42.000Z" title="发表于 2020-08-20 20:56:42">2020-08-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">
+我厌恶考试
+考试很重要
+几乎每次考试我都不满意，因此想记录下来每次考试不满意的地方，供自己反思改进2020.6.29-误差分析与数据处理-期末考试时间分配没有把握好。本来题目并不多也并不难，但是我前面太求稳了，答得太慢了，导致最后两道题时间很紧。我应当在考试开始安排好每道题的时间，并且在考试中多次调整做题速度。复习没有做好，复习时间也太短了。大部分都复习到了，但是有一章的习题没复习，就错了…我应当提前几天复习的，并且不能忽视每个地方，不能抱有侥幸心理。2020.7.19-高等数学-期末考试有一些题目是平时练过的，但是却没有印象了。造成这种状况的原因是我没有完全认真地对待平时的练习。虽然我做作业很认真，但是做完了就不会改进、反思、总结了。这就导致即使是认真做过的题，最后该不会还是不会。因此我应当在做完作业之后，进行改正、总结。可以在每次做作业的时候标注一下想了很久或不太确定的习题，还可以在每次批改作业的时候，把有意义的题目写在错题本上，以供期末复习。  2020.10.29-基础物理实验Ⅱ-期末考试实验期末考试是一门非典型的考试，但是还是有必要来记录一下。考试结果其实非常一般，如果按照 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/22/myownway/" title="前面的路和后面的路">     <img class="post_bg" data-lazy-src="https://upload.cc/i1/2020/08/22/pi6vnx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前面的路和后面的路"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/myownway/" title="前面的路和后面的路">前面的路和后面的路</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-22T08:33:48.000Z" title="发表于 2020-04-22 16:33:48">2020-04-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%80%BB%E7%BB%93/">总结</a></span></div><div class="content">好像没有很失落，当然开心是更不可能的了。
+其实根本不该失落吧，毕竟这是我一直秉持的准则：所有的选择都是你自己做的，因此所有的后果也应当由你自己来承担。中途会遇到什么意外根本不是借口，你本应当提前规避一切未知的风险，应当主动反思自己，应当更加勤奋，你本应当提前洞见未来，这些都是最基本的能力。有时候我甚至会怀疑，如果自己就是一个机器人，永远只会做正确的事，没有积极的情感也没有消极的情感，自己会不会比现在更开心呢？
+但是还是要反思吧，还是要反思吧。还是要从一次次的失败中恢复斗志么？我是一个不服输的人，但是不服输是好事么？不服输会不会阻碍了我的反思呢？也许我根本没能从每次失败当中吸取到教训，也许我一次又一次地只是靠着所谓的“不服输”自我感动，将自己从失败的痛苦当中脱离出来。也许为了自己的目标，连引以为豪的性格都理应改变吧，是这样么？我的某些基本的个性，是不是已经注定着自己的失败呢？如果答案是肯定的，那么我要改变么，改变的话，那个人还能是我么？
+我不知道。
+我不知道啊。
+这个世界很奇怪，我好像什么都不懂什么都不明白，而且我总觉得世界它越来越奇怪了。
+我觉得我从没有服输过，从来没有。是不是所有伟大 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/10/04/country/" title="浅谈爱国">     <img class="post_bg" data-lazy-src="https://cdn.pixabay.com/photo/2016/01/19/17/29/earth-1149733_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈爱国"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/10/04/country/" title="浅谈爱国">浅谈爱国</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-10-04T12:02:29.000Z" title="发表于 2019-10-04 20:02:29">2019-10-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%80%9D%E8%80%83/">思考</a></span></div><div class="content">恰逢国庆，我想来理性地讨论一下爱国这个话题。
+每个人从小就被教育要爱国，多年的教育让我们已经把爱国当成了一种本能，仿佛爱国这个话题没有讨论的余地，也没有思考的意义。其实不然，爱国这个话题不仅深刻而为复杂。对爱国的不同理解也会导致截然不同的行为，而且不经思考的爱国一定是盲目的爱国。爱国对每个人都是一个无法回避的话题，因此每个人都要对爱国进行深刻理性地思考。
+爱国有这么几种层次
+第一种爱国：热爱祖国的一片热土，热爱炎黄子孙的悠久历史，热爱中华民族的优秀文化。从本质上来说，这样的爱国和热爱故乡差别不大。这种爱国非常健康，也非常令人感动，是人类的一种浪漫的情怀。这种爱国也是非常自然的，因为每个人心中都含有着对故土最深厚的眷恋。
+在第一种爱国情怀的基础上，一些仁人志士想要为祖国的发展做出自己的贡献，想要让祖国人民过上更加美好的生活，这就是第二层爱国。
+第二种爱国：热爱祖国人民，渴望为祖国繁荣富强作出贡献。这个层次的爱国也是非常高尚的。我们有文天祥，有孙中山，有毛泽东，有钱学森，是他们的爱国情怀让我们中国变得更加美好，是他们奉献了自己，救中国于水深火热，让祖国繁荣富强。
+以上两种就是我理解的爱国， ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/img/avatar.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">会钟意</div><div class="author-info__description">也许会分享一些笔记和碎碎念。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">5</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories"><div class="headline">分类</div><div class="length_num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://www.zhihu.com/people/hui-zhong-yi-21"><i></i><span>我的知乎账号</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ZhongyiHui" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:huizhy@mail2.sysu.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">博主挖了一个大坑</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/27/probability/" title="概率“论”——论概率的本质"><img class="aside-post-bg" data-lazy-src="https://cdn.pixabay.com/photo/2016/02/22/08/22/money-1214945_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="概率“论”——论概率的本质"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/27/probability/" title="概率“论”——论概率的本质">概率“论”——论概率的本质</a><time class="aside-post_meta post-meta-date" datetime="2020-08-27T10:48:44.000Z" title="发表于 2020-08-27 18:48:44">2020-08-27</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/27/summary/" title="大一总结与大二计划"><img class="aside-post-bg" data-lazy-src="https://cdn.pixabay.com/photo/2019/05/11/02/33/cherry-blossom-4194997_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大一总结与大二计划"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/27/summary/" title="大一总结与大二计划">大一总结与大二计划</a><time class="aside-post_meta post-meta-date" datetime="2020-08-27T06:10:15.000Z" title="发表于 2020-08-27 14:10:15">2020-08-27</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/20/exam-diary/" title="考试日记"><img class="aside-post-bg" data-lazy-src="https://cdn.pixabay.com/photo/2016/07/06/15/29/math-1500720_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="考试日记"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/20/exam-diary/" title="考试日记">考试日记</a><time class="aside-post_meta post-meta-date" datetime="2020-08-20T12:56:42.000Z" title="发表于 2020-08-20 20:56:42">2020-08-20</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/04/22/myownway/" title="前面的路和后面的路"><img class="aside-post-bg" data-lazy-src="https://upload.cc/i1/2020/08/22/pi6vnx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前面的路和后面的路"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/04/22/myownway/" title="前面的路和后面的路">前面的路和后面的路</a><time class="aside-post_meta post-meta-date" datetime="2020-04-22T08:33:48.000Z" title="发表于 2020-04-22 16:33:48">2020-04-22</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2019/10/04/country/" title="浅谈爱国"><img class="aside-post-bg" data-lazy-src="https://cdn.pixabay.com/photo/2016/01/19/17/29/earth-1149733_1280.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈爱国"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2019/10/04/country/" title="浅谈爱国">浅谈爱国</a><time class="aside-post_meta post-meta-date" datetime="2019-10-04T12:02:29.000Z" title="发表于 2019-10-04 20:02:29">2019-10-04</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">学习</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%80%9D%E8%80%83/"><span class="card-category-list-name">思考</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%80%BB%E7%BB%93/"><span class="card-category-list-name">总结</span><span class="card-category-list-count">2</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E4%B8%AA%E4%BA%BA/" style="font-size: 16px; color: #999">个人</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16px; color: #999">学习</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 16px; color: #999">总结</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 16px; color: #999">生活</a> <a href="/tags/%E8%80%83%E8%AF%95/" style="font-size: 16px; color: #999">考试</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 16px; color: #999">计划</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-map"><div class="card-content"><div class="item-headline"><i class="fas fa-globe-asia" aria-hidden="true"></i><span>活点地图</span></div><script id="clstr_globe" type="text/javascript" defer="defer" src="//clustrmaps.com/globe.js?d=HTizlFgMWNoq7sU4b5B19YS_DCSRgCM24W5cGAZHPVQ"></script></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">5</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/top_img/index.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By 会钟意</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。,细推物理需行乐，何为浮名绊此生。,We must know&#44; we will know.,我思故我在。,普适的代价是抽象。,在所有惯性系中，物理规律的形式相同。,我将永远困惑，也永远寻找。困惑是我的诚实，寻找是我的勇敢。,朝闻道，夕死可矣。,路漫漫其修远兮，吾将上下而求索。".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script defer="defer" id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script></div></body></html>
